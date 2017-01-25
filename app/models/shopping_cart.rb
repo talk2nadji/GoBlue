@@ -16,7 +16,9 @@ class ShoppingCart
   end
 
   def remove_product(product_id)
-    
+    #remove product_id from the ShoppingCart
+    shoppingcart = [{ product_id: 5, amount: 1}, {product_id: 6, amount: 3 }]
+
   end
 
 end

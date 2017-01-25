@@ -4,4 +4,5 @@ class ShoppingCartsController < ApplicationController
     cart.add_product(params[:product_id])
     redirect_to product_path(params[:product_id]), notice: "added to ShoppingCart"
   end
+
 end
