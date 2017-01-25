@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   get '/pages/home'
+  resources :products
+  resources :categories
 end
