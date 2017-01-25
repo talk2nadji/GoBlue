@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/pages/home'
   resources :products
   resources :categories
+  resources :shopping_carts, only: [:create]
 end
