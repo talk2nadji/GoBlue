@@ -10,35 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170125072005) do
-=======
-ActiveRecord::Schema.define(version: 20170124164614) do
->>>>>>> ab3492835ccbddca11cc0a341f3028583e816eb1
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> ab3492835ccbddca11cc0a341f3028583e816eb1
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.decimal  "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-<<<<<<< HEAD
     t.integer  "category_id"
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
-=======
->>>>>>> ab3492835ccbddca11cc0a341f3028583e816eb1
   end
 
   create_table "users", force: :cascade do |t|

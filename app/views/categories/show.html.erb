@@ -1,0 +1,13 @@
+<h1><%= @category.name %> Details</h1>
+
+<% if @category.products.any? %>
+  <ul>
+  <% @category.products.each do |product| %>
+    <p><%= link_to product.name, product %></p>
+  <% end %>
+  </ul>
+<% else %>
+  <p>No Products in this category</p>
+<% end %>
+
+<%= link_to '[back]', categories_path %>
