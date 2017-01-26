@@ -3,7 +3,7 @@
 ## Requirement: Building a store demo
 
 ## Models
-x Product -> name:string description:string price:decimal
+x Product -> name:string description:text price:decimal
 x Category -> name:string
 x User -> devise
 x AdminUser -> STI (single table inheritance)
