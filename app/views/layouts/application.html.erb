@@ -9,15 +9,18 @@
   </head>
 
   <body>
-  <!-- Static navbar -->
-  <%= render 'shared/navbar' %>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
   <div class="container">
-    <%= yield %>
+  	<div class="row">
+  		<div class="col-md-12">
+        <%= render 'shared/navbar' %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+    </div>
   </div>
-</body>
+
+  </body>
 
 </html>
