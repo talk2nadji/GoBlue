@@ -3,13 +3,13 @@
 </div>
 
 <ul class="custom-nav nav nav-tabs">
-  <li class="active">
+  <li class="<%= active?(root_path) %>">
     <%= link_to "Home", root_path %>
   </li>
-  <li>
+  <li class="<%= active?(categories_path) %>">
     <%= link_to "categories", categories_path %>
   </li>
-  <li class="active">
+  <li class="<%= active?(products_path) %>">
     <%= link_to "products", products_path %>
   </li>
 
