@@ -1,24 +1,19 @@
-# README
+# GoBlue WebApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirement: Building a store demo
 
-Things you may want to cover:
+## Models
+x Product -> name:string description:string price:decimal
+x Category -> name:string
+x User -> devise
+x AdminUser -> STI (single table inheritance)
+- ShoppingCart -> custom
+- Order ->
+- LineItem ->
 
-* Ruby version
+## Features
+- reader docs Codaisseur
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## UI
+- Bootstrap
+- AJAX

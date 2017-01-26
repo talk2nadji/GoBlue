@@ -3,6 +3,9 @@ Category.destroy_all
 User.destroy_all
 
 User.create!(email: "richard@goblue.com", password: "abcd1234", password_confirmation: "abcd1234" )
+User.create!(email: "haico@goblue.com", password: "abcd1234", password_confirmation: "abcd1234" )
+User.create!(email: "jesse@goblue.com", password: "abcd1234", password_confirmation: "abcd1234" )
+AdminUser.create!(email: "marcia@goblue.com", password: "abcd1234", password_confirmation: "abcd1234" )
 
 jams = Category.create!( {name: "Jams"} )
 honeys = Category.create!( {name: "Honeys"} )
