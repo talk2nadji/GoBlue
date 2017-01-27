@@ -1,7 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "gritter";
 // @import "custom.scss";
 
+.custom-container {
+  margin-top: 20px;
+}
+
 .custom-nav {
-  margin-top: 15px;
+  margin-top: 20px;
 }
