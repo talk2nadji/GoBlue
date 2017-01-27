@@ -3,13 +3,15 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   describe "Creation" do
     before do
-      @product = Product.create(name: "Juice", description: "Whatever", price: 0.99)
+      @product = Product.create(name: "Juice", brand: "Brandname", description: "Whatever", price: 0.99)
     end
+
     it "can be created" do
       expect(@product).to be_valid
     end
 
-    it "cannot be created without a name, description, price" do
+    it "cannot be created without a name, brand, description, price" do
+      @product.name = nil
       @product.name = nil
       @product.description = nil
       @product.price = nil
