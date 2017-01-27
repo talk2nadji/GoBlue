@@ -13,6 +13,5 @@
   <%= @product.price %>
 </p>
 
-<%= link_to '[edit]', edit_product_path(@product) %> |
-<%= link_to '[products]', products_path %> |
-<%= link_to('[add to cart]', shopping_carts_path(product_id: @product.id), method: :post) %>
+<%= link_to('add to cart', shopping_carts_path(product_id: @product.id), method: :post, class: "btn btn-default") %>
+<%= link_to 'edit', edit_product_path(@product), class: "btn btn-link" %> 
