@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category, optional: true
+  has_many :photos
 
   validates :name, presence: true
   validates :brand, presence: true
