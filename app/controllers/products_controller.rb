@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @photos = @product.photos
   end
 
   def new
@@ -20,6 +21,9 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
       if @product.save
+        image_params.each do |image|
+          @product.photos.create(image: image)
+        end
         redirect_to @product, notice: 'Product was successfully created.'
       else
         render 'new'
@@ -28,6 +32,9 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
+      image_params.each do |image|
+        @product.photos.create(image: image)
+      end
       redirect_to @product, notice: 'Product was successfully updated.'
     else
       render 'edit'
@@ -47,5 +54,9 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).permit(:name, :brand, :description, :price)
+    end
+
+    def image_params
+      params[:images].present? ? params.require(:images) : []
     end
 end
