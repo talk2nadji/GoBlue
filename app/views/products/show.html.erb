@@ -16,6 +16,10 @@
     </p>
 
     <%= link_to('add to cart', shopping_carts_path(product_id: @product.id), method: :post, class: "btn btn-default") %>
-    <%= link_to 'edit', edit_product_path(@product), class: "btn btn-link" %>
+    <% if user_signed_in? %>
+      <% if current_user.type == 'AdminUser' %>
+        <%= link_to 'edit', edit_product_path(@product), class: "btn btn-link" %>
+      <% end %>
+    <% end %>
   </div>
 </div>
